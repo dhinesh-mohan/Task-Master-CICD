@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-boot-app
+  name: task-master
   labels:
-    app: spring-boot-app
+    app: task-master
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-boot-app
+      app: task-master
   template:
     metadata:
       labels:
-        app: spring-boot-app
+        app: task-master
     spec:
       containers:
-      - name: spring-boot-app
+      - name: task-master
         image: dhineshmohan/taskmaster:replaceImageTag
         ports:
         - containerPort: 8080
