@@ -12,7 +12,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/dhinesh-mohan/Task-Master-CICD'
+                sh 'echo passed'
+                //git branch: 'main', url: 'https://github.com/dhinesh-mohan/Task-Master-CICD'
             }
         }
         
