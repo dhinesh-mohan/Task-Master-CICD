@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-master
+  labels:
+    app: task-master
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: task-master
+  template:
+    metadata:
+      labels:
+        app: task-master
+    spec:
+      containers:
+      - name: task-master
+        image: dhineshmohan/taskmaster:8
+        ports:
+        - containerPort: 8080
