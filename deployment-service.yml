@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: task-master
-        image: dhineshmohan/taskmaster:replaceImageTag
+        image: dhineshmohan/taskmaster:8
         ports:
         - containerPort: 8080
